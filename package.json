@@ -1,20 +1,29 @@
 {
   "name": "music-platform",
   "version": "0.1.0",
+  "author": "Jose Ramos <jlramosr@gmail.com>",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlramosr/music-platform.git"
+  },
   "dependencies": {
+    "@material-ui/core": "^3.3.1",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-router": "^4.3.1",
     "react-scripts": "2.0.5"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
