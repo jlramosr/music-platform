@@ -1,36 +1,26 @@
 import React from 'react'
-import logo from './assets/img/logo.svg'
-import {Router, Route} from 'react-router'
-
-class Home extends Component {
-  render(){
-    return <img src={logo} className="App-logo" alt="logo" />
-  }
-}
-
-// More components
-class Car extends Component {
-  render(){
-    return (<h1>Cars page</h1>)
-  }
-}
-
-class About extends Component {
-  render(){
-    return (<h1>About page</h1>)
-  }
-}
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import AppContent from './AppContent.jsx'
+import Header from 'components/Header/Header.jsx'
+import Footer from 'components/Footer/Footer.jsx'
+import AppStyles from 'assets/jss/appStyles.jsx'
 
 class App extends React.Component {
   render() {
+    const { classes } = this.props
     return (
-      <Router>
-        <Route path="/" component={Home}/>
-        <Route path="/cars" component={Car}/>
-        <Route path="/about" component={About}/>
-      </Router>
+      <div className={classes.root}>
+        <div className={classes.header}><Header /></div>
+        <div className={classes.content}><AppContent /></div>
+        <div className={classes.footer}><Footer /></div>
+      </div>
     )
   }
 }
 
-export default App
+App.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(AppStyles)(App)
