@@ -5,6 +5,7 @@ import AppContent from './AppContent.jsx'
 import Header from 'components/Header/Header.jsx'
 import Footer from 'components/Footer/Footer.jsx'
 import AppStyles from 'assets/jss/appStyles.jsx'
+import ArtistsDetailDialog from 'scenes/Artists/ArtistsDetailDialog.jsx'
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <div className={classes.header}><Header /></div>
         <div className={classes.content}><AppContent /></div>
         <div className={classes.footer}><Footer /></div>
+        <ArtistsDetailDialog open={false} />
       </div>
     )
   }

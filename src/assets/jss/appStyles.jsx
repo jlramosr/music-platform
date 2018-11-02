@@ -2,11 +2,12 @@ export default {
   root: {
     display: 'flex', 
     flexDirection: 'column',
-    minHeight: '100vh'
+    minHeight: '100vh',
+    width: '100vw'
   },
   header: {},
   content: {
-    flexGrow: 1
+    flex: 1
   },
   footer: {}
 }

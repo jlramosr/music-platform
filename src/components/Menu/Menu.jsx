@@ -1,13 +1,31 @@
 import React from 'react'
-import MenuButton from './MenuButton.jsx'
+import { withRouter } from 'react-router'
+import PropTypes from 'prop-types'
+import Button from 'components/Button/Button.jsx'
 import homeIcon from '@material-ui/icons/Home'
 import artistsIcon from '@material-ui/icons/Face'
 import genresIcon from '@material-ui/icons/Mic'
 
-export default () => (
-  <React.Fragment>
-    <MenuButton title="Home" to="/" icon={homeIcon} />
-    <MenuButton title="Artists" to="/artists" icon={artistsIcon} />
-    <MenuButton title="Genres" to="/genres" icon={genresIcon} />
-  </React.Fragment>
-)
+class Menu extends React.Component {
+  render() {
+    const { location: { pathname } } = this.props
+
+    if (pathname === '/') {
+      return <React.Fragment></React.Fragment>
+    }
+
+    return (
+      <React.Fragment>
+        <Button title="Home" to="/" icon={homeIcon} responsive />
+        {!pathname.startsWith('/artists') && <Button title="Artists" to="/artists" icon={artistsIcon} responsive />}
+        {!pathname.startsWith('/genres') && <Button title="Genres" to="/genres" icon={genresIcon} responsive />}
+      </React.Fragment>
+    )
+  }
+}
+
+Menu.propTypes = {
+  location: PropTypes.object.isRequired
+}
+
+export default withRouter(Menu)

@@ -1,14 +1,14 @@
 import React from 'react'
 
-class ArtistsList extends React.Component {
+class ArtistsDetailDialog extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>Artists List</p>
+        <p>Artists Detail Dialog</p>
       </React.Fragment>
       
     )
   }
 }
 
-export default ArtistsList
+export default ArtistsDetailDialog

@@ -1,8 +1,9 @@
 export default {
-  button: {
+  root: {
     marginLeft: 8
   },
-  icon: {
+  icon: {},
+  iconWithText: {
     marginRight: 8
   }
 }
