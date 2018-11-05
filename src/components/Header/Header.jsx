@@ -12,7 +12,7 @@ class Header extends React.Component {
     const { classes } = this.props
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="default">
+        <AppBar position="fixed" color="default">
           <Toolbar>
             <div className={classes.grow}>
               <img src={logo} alt="logo" className={classes.logo}/>

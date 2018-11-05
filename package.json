@@ -14,14 +14,21 @@
     "classnames": "^2.2.6",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "json-server": "^0.14.0",
+    "npm-run-all": "^4.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-back": "json-server --watch src/api/db.json --port 3004",
+    "start-front": "react-scripts start",
+    "start": "npm-run-all --parallel start-back start-front",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

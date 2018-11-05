@@ -1,6 +1,7 @@
 export default {
   root: {
-    padding: 8
+    padding: 0,
+    marginTop: 72
   }
 }
 

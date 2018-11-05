@@ -15,7 +15,7 @@ class App extends React.Component {
         <div className={classes.header}><Header /></div>
         <div className={classes.content}><AppContent /></div>
         <div className={classes.footer}><Footer /></div>
-        <ArtistsDetailDialog open={false} />
+        <ArtistsDetailDialog />
       </div>
     )
   }

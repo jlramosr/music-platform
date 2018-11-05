@@ -10,10 +10,10 @@ import ButtonStyles from 'assets/jss/buttonStyles.jsx'
 
 class ButtonContainer extends React.Component {
   render() {
-    const { classes, icon, onClick, responsive, title, variant, width } = this.props
+    const { classes, icon, onClick, responsive, size, title, variant, width } = this.props
     const showText = !responsive || width !== 'xs'
     return (
-      <ButtonMUI size="medium" variant={variant || 'outlined'} color="primary" onClick={onClick} className={classes.root}>
+      <ButtonMUI size={size} variant={variant || 'outlined'} color="primary" onClick={onClick} className={classes.root}>
         {icon && <Icon component={icon} className={classnames(classes.icon, showText && classes.iconWithText)} /> }
         {showText && title}
       </ButtonMUI>
@@ -42,6 +42,7 @@ Button.propTypes = {
   icon: PropTypes.func,
   onClick: PropTypes.func,
   responsive: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   title: PropTypes.string.isRequired,
   to: PropTypes.string,
   variant: PropTypes.string,
@@ -49,7 +50,8 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  responsive: false
+  responsive: false,
+  size: 'medium'
 }
 
 export default withWidth()(withStyles(ButtonStyles)(Button))

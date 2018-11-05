@@ -1,6 +1,7 @@
 export default {
   root: {
-    marginLeft: 8
+    marginLeft: 8,
+    maxHeight: 48
   },
   icon: {},
   iconWithText: {
