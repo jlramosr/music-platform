@@ -1,366 +1,44 @@
 {
-  "companies": [
+  "artists": [
     {
-      "description": "Hachette Book Group publishes great works for readers of all ages—as one of the largest trade and educational publishers in the world.",
-      "countryId": "US",
-      "serviceIds": [
-        "11",
-        "16"
-      ],
-      "tags": [],
-      "short_name": "hachettebookgroup",
-      "name": "Hachette Book Group",
-      "create_date": "2017-10-31T20:44:29.43819Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": null,
-      "id": "1496",
-      "size": {
-        "name": "Large Size",
-        "short_name": "large"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/hachettebookgroup",
-        "jobs_page": "https://www.themuse.com/jobs/c-hachettebookgroup",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1496%2Fabout_modules%2F9797%2F530b00b8-5103-43d3-b3ac-449182a6ec5b.jpg%3Fv%3D513ba3de8215c2c6ec21669f108a8422458a501c3778984fe7ddae2231944cfd&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1496/about_modules/9797/7d234e80-8035-4e47-b33a-c4eb83dd78c5.jpg?v=7bb39530f6e05e76cfdec8f92e32ee440133e7002408f84dcf9ead701f51ce91",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1496/small_logo.png?v=63c8170635d6eb29aed553c5a68a289d7515289dc7a6e4832a9c1fd0e3fb133e",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1496/about_modules/9797/530b00b8-5103-43d3-b3ac-449182a6ec5b.jpg?v=513ba3de8215c2c6ec21669f108a8422458a501c3778984fe7ddae2231944cfd",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1496/about_modules/9797/76241f77-bed3-4a1c-b9a0-c4b3e91ccaf5.jpg?v=82daa4ae93a3d2681eea05592bbbe01bff6054c7288244a5f4aebbca873781f4"
-      }
+      "id": "1",
+      "name": "Mark Knopfler",
+      "genres": ["1", "3"],
+      "img": "https://e00-elmundo.uecdn.es/elmundo/imagenes/2010/07/23/ocio/1279880516_extras_ladillos_1_5.jpg"
     },
     {
-      "description": "Goosehead Insurance is an independent agency and franchise company, taking pride in the power of choice and protecting people without cutting corners. \r\n",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "gooseheadinsurance",
-      "name": "Goosehead Insurance",
-      "create_date": "2017-06-12T20:24:26.116899Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": "followgoosehead",
-      "id": "829",
-      "size": {
-        "name": "Medium Size",
-        "short_name": "medium"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/gooseheadinsurance",
-        "jobs_page": "https://www.themuse.com/jobs/c-gooseheadinsurance",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F829%2Fabout_modules%2F76744%2F02ad5a60-a382-4dcf-a987-08e7b8794e08.jpg%3Fv%3D45471f6cd4b8091f9faec6d50372bded53a9e8c5def57732b5f5539f0a0843b8&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/829/about_modules/76744/dea4f662-2de5-4c35-9d06-954cdf209bf3.jpg?v=2b01fe443cc426adc1c690839933503b95d64cb8c4bcd0066001bb5ced2e287d",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/829/small_logo.png?v=17f470f41396f57ffd36477be8709f2558ce4c636810e661531bf66d64a83e31",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/829/about_modules/76744/02ad5a60-a382-4dcf-a987-08e7b8794e08.jpg?v=45471f6cd4b8091f9faec6d50372bded53a9e8c5def57732b5f5539f0a0843b8",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/829/about_modules/76744/38a67af2-3863-4fd2-9384-4b3a1074ffd1.jpg?v=c163e1126741cdf188d3025e26da3435592148210451d1e5d0a3332246fed478"
-      }
+      "id": "2",
+      "name": "Mecano",
+      "genres": ["5"],
+      "img": "http://epoca1.valenciaplaza.com/bd/imagenes/imagen93423p.jpg"
     },
     {
-      "description": "DealerSocket creates and delivers one of the automotive industry’s most comprehensive car sales and overall management technology platforms, serving more than 10,000 dealerships in North America.",
-      "countryId": "US",
-      "serviceIds": [
-        "1",
-        "2",
-        "7",
-        "15"
-      ],
-      "tags": [],
-      "short_name": "dealersocket",
-      "name": "DealerSocket",
-      "create_date": "2016-09-21T15:50:51.605136Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": null,
-      "id": "1070",
-      "size": {
-        "name": "Large Size",
-        "short_name": "large"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/dealersocket",
-        "jobs_page": "https://www.themuse.com/jobs/c-dealersocket",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1070%2Fmodules%2F4277%2Fasset1.jpg%3Fv%3D61f829963e37d22b499f0fc5ffdb62afe7fa3f274badd2097cf5a8232ef0c824&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1070/modules/4277/asset2.jpg?v=6f17d58d7f87343548c7a9495c8b04a2caf06f3c556520c6ab670d7af769dbf5",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1070/small_logo.png?v=e9e42e98369ab66a9ec8314851622782cd0a50362c520bfba898f5a90cb6d878",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1070/modules/4277/asset1.jpg?v=61f829963e37d22b499f0fc5ffdb62afe7fa3f274badd2097cf5a8232ef0c824",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1070/modules/4277/asset3.jpg?v=422e03a392ba3ca72bcf554fd9c8bb9190f4c2c4e9a7a4272425309e03cd6cc8"
-      }
+      "id": "3",
+      "name": "The Rolling Stones",
+      "genres": ["1", "2"],
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAZ8GwDHYYa2mFi6EF8TPb0Q6A3li5XnGuuCr_KmlcaHlOExvqVw"
+    }
+  ],
+  "genres": [
+    {
+      "id": "1",
+      "name": "Rock"
     },
     {
-      "description": "Edmodo is a global education network that helps connect learners—teachers, students, and parents—with the people, resources, and coaching tools they need to reach their full potential.",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "edmodo",
-      "name": "Edmodo",
-      "create_date": "2016-10-19T22:33:13.410356Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": "edmodo",
-      "id": "1101",
-      "size": {
-        "name": "Medium Size",
-        "short_name": "medium"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/edmodo",
-        "jobs_page": "https://www.themuse.com/jobs/c-edmodo",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1101%2Fmodules%2F4482%2Fasset1.jpg%3Fv%3D2411013ab3dc7e137fabb217ef79c42abe52286fc650d4184346df3e618530af&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1101/modules/4482/asset2.jpg?v=91f949021512933f2867f9bddcf32bc4af841aae6572419c9d5d244e2ad706b6",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1101/small_logo.png?v=3fdbd1bcfc5775f5aff4f1ba6b9bd567b47524fddefeff47534c3e451c1af77e",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1101/modules/4482/asset1.jpg?v=2411013ab3dc7e137fabb217ef79c42abe52286fc650d4184346df3e618530af",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1101/modules/4482/asset3.jpg?v=510896385eb6ac4d4726927793df2a407ef22891d41ecfe895c5677674e804a3"
-      }
+      "id": "2",
+      "name": "Blues"
     },
     {
-      "description": "Hometeam combines compassion and technology to create resources for seniors and their families that improve communication, recipients’ quality of life, and the overall field of in-home care.",
-      "countryId": "US",
-      "serviceIds": [
-        "1",
-        "2",
-        "7",
-        "12"
-      ],
-      "tags": [],
-      "short_name": "hometeam",
-      "name": "Hometeam",
-      "create_date": "2016-05-18T21:40:13.549997Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": null,
-      "id": "943",
-      "size": {
-        "name": "Medium Size",
-        "short_name": "medium"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/hometeam",
-        "jobs_page": "https://www.themuse.com/jobs/c-hometeam",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F943%2Fabout_modules%2F10122%2F52ae695e-8472-4399-9d65-1d6765efacab.jpg%3Fv%3De480edba519635193763612e6b8cdf9678f50645ed0b7eb87685ed39ef714084&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/943/about_modules/10122/1d681bb6-9b21-44be-a8c8-985f41e15763.jpg?v=d3405bcc847af2a92cafd850dc051603dfe3432532e6c478737e63c0092954e7",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/943/small_logo.png?v=20a85efb0b0e238cb24ddb8b71f1fdf5d5cfcacda6453d64fcdfaac7688dc1f6",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/943/about_modules/10122/52ae695e-8472-4399-9d65-1d6765efacab.jpg?v=e480edba519635193763612e6b8cdf9678f50645ed0b7eb87685ed39ef714084",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/943/about_modules/10122/31641863-08bd-445a-ae7a-f417f90616d8.jpg?v=b28001b59bc3f0dae143e80b371c06e7045f7c32304aa9cdbbb4f07e814bc131"
-      }
+      "id": "3",
+      "name": "Country"
     },
     {
-      "description": "Affectiva improves how people connect to devices and each other by democratizing and pushing the limits of emotional artificial intelligence through emotion recognition technology.",
-      "countryId": "US",
-      "serviceIds": [
-        "4",
-        "2",
-        "7"
-      ],
-      "tags": [],
-      "short_name": "affectiva",
-      "name": "Affectiva",
-      "create_date": "2016-11-11T14:34:16.265331Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": "affectiva",
-      "id": "1106",
-      "size": {
-        "name": "Small Size",
-        "short_name": "small"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/affectiva",
-        "jobs_page": "https://www.themuse.com/jobs/c-affectiva",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1106%2Fabout_modules%2F4538%2F913795d5-18b1-4e5b-8866-0e87e7a42fd0.jpg%3Fv%3D1bbfa61624bd8f0bec09c590077ce3f6aadcc5b2ee988577a9e93579605e51d9&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1106/modules/4538/asset2.jpg?v=2cac651c3457bb641cd0d37ba6022fea35f209a115a8f1866378f075f69f504a",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1106/small_logo.png?v=630c61d1b14327171538c4ce174cd7c8a799e765bc60300524810e25aa5c1b00",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1106/about_modules/4538/913795d5-18b1-4e5b-8866-0e87e7a42fd0.jpg?v=1bbfa61624bd8f0bec09c590077ce3f6aadcc5b2ee988577a9e93579605e51d9",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1106/modules/4538/asset3.jpg?v=64a08f72189b974536c4607fc342a141949f663853a360762cea684022ad1f91"
-      }
+      "id": "4",
+      "name": "Jazz"
     },
     {
-      "description": "Alto Pharmacy aims to offer the world’s most patient-centric pharmaceutical services.",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "altopharmacy",
-      "name": "Alto Pharmacy",
-      "create_date": "2017-12-20T18:45:01.575039Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": null,
-      "id": "1525",
-      "size": {
-        "name": "Medium Size",
-        "short_name": "medium"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/altopharmacy",
-        "jobs_page": "https://www.themuse.com/jobs/c-altopharmacy",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1525%2Fabout_modules%2F10383%2Fbb7035ab-7e33-4451-b81d-2fce3588d614.jpg%3Fv%3Dd5ca317fff0927c914aa9463e955e265ca7f04a93c68382229d96ba916c30535&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1525/about_modules/10383/16c31124-e170-4cbb-9541-194adae5ab86.jpg?v=a9a202b4423e1933747a6bd0456851d14f8b76cbb02f5dee5be266acf83e33ad",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1525/small_logo.png?v=f9c008f2faf5f5011116197e58accdaa965e88903270f946154d89aa27611d8f",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1525/about_modules/10383/bb7035ab-7e33-4451-b81d-2fce3588d614.jpg?v=d5ca317fff0927c914aa9463e955e265ca7f04a93c68382229d96ba916c30535",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1525/about_modules/10383/eec04d32-9f19-42a4-b893-bf99675b2f81.jpg?v=e8582170cb707731b5c23ea7272e128159f52deb3430f42804ef3862fca5f5d6"
-      }
-    },
-    {
-      "description": "Earnest Research is a VC-backed data innovation startup driven to change the way professionals understand consumer and business behavior. ",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "earnestresearch",
-      "name": "Earnest Research",
-      "create_date": "2016-12-06T22:30:11.868106Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": null,
-      "id": "1157",
-      "size": {
-        "name": "Small Size",
-        "short_name": "small"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/earnestresearch",
-        "jobs_page": "https://www.themuse.com/jobs/c-earnestresearch",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1157%2Fabout_modules%2F21200%2Fa2fff2e7-4f47-47bf-a642-e06019af2d6a.jpg%3Fv%3D35045ed0ea73357ce0494a0bd8a2677b1777508e525137af3e963576dfbffccc&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1157/about_modules/21200/dd3fd58d-2605-4680-a44b-a6d2033134ed.jpg?v=1c3e8c5f03445bfeb2f3338b27b46bfb788ff8bbe632c52e9ba23f6632f9ccf5",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1157/small_logo.png?v=c396d6dc549df634ccddf17cea16889c14d3922eb0b9cade4ed9830799b50202",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1157/about_modules/21200/a2fff2e7-4f47-47bf-a642-e06019af2d6a.jpg?v=35045ed0ea73357ce0494a0bd8a2677b1777508e525137af3e963576dfbffccc",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1157/about_modules/21200/962b290f-4343-4f4c-ba2a-b62bd97506d9.jpg?v=56c19813de305197fab3a38db80c6dd47fd1b8bec64a3c91ea3613a7ffecb80f"
-      }
-    },
-    {
-      "description": "Wilton Brands encourages customers across the nation to make meaningful and lasting memories through special event celebration and shared craft creation with family and friends.",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "wiltonbrands",
-      "name": "Wilton Brands",
-      "create_date": "2017-11-29T19:36:10.929394Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": "WiltonCakes",
-      "id": "1414",
-      "size": {
-        "name": "Large Size",
-        "short_name": "large"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/wiltonbrands",
-        "jobs_page": "https://www.themuse.com/jobs/c-wiltonbrands",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1414%2Fpages%2F1280%2Ff1.jpg%3Fv%3Ddadfa4cbb42c1247e67a944e6db38fb7ed156e071e645f0bef773e5381f4b047&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1414/pages/1280/f2.jpg?v=e1b48de37e3b2d6f80b9732954fd143770d65a4f81426ecc60e0e3949869883d",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1414/small_logo.png?v=c883b346f7dff23ab80c59790db77bd64bdf8d87369bccdcb786a27f33b036a6",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1414/pages/1280/f1.jpg?v=dadfa4cbb42c1247e67a944e6db38fb7ed156e071e645f0bef773e5381f4b047",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1414/pages/1280/f3.jpg?v=860e67cd81903c75a032b5ea52697a92eda064f16a9c495898ebb28157fa11b6"
-      }
-    },
-    {
-      "description": "Social Solutions creates software to assist nonprofits with data management. ",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "socialsolutions",
-      "name": "Social Solutions",
-      "create_date": "2018-04-13T13:40:51.89075Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": null,
-      "id": "11645",
-      "size": {
-        "name": "Medium Size",
-        "short_name": "medium"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/socialsolutions",
-        "jobs_page": "https://www.themuse.com/jobs/c-socialsolutions",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F11645%2Fabout_modules%2F21399%2Fb93de829-c005-40f5-9616-ba2f730ac1cd.jpg%3Fv%3D39b77ee40e29019964e5976bfbe0aad01719a7624b10313d63d9cc2950593fe4&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/11645/about_modules/21399/41107abb-9fb0-4fe9-8368-38c77aea6677.jpg?v=4f3aae42847a79a5259740eeacb46845776ed6e08c1765092e178bf6b5239d2f",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/11645/small_logo.png?v=92089d2f4ff2214e6f8de7ae696e789bd766bd84178ba0d15fe437a9defba1d1",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/11645/about_modules/21399/b93de829-c005-40f5-9616-ba2f730ac1cd.jpg?v=39b77ee40e29019964e5976bfbe0aad01719a7624b10313d63d9cc2950593fe4",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/11645/about_modules/21399/8ef17c28-afe5-4a56-931f-e2673a956e7f.jpg?v=6419a7db150fca476b7a57cbb679e1aab02708933a7b27dbda80b84caf1d3d60"
-      }
-    },
-    {
-      "description": "Integrative Nutrition is the largest nutrition school in the world—and the only school that explores more than 100 different dietary theories.",
-      "countryId": "US",
-      "serviceIds": [
-        "3",
-        "4",
-        "8"
-      ],
-      "tags": [],
-      "short_name": "integrativenutrition",
-      "name": "Integrative Nutrition",
-      "create_date": "2016-11-15T15:10:54.850043Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": "NutritionSchool",
-      "id": "1149",
-      "size": {
-        "name": "Medium Size",
-        "short_name": "medium"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/integrativenutrition",
-        "jobs_page": "https://www.themuse.com/jobs/c-integrativenutrition",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1149%2Fmodules%2F4599%2Fasset1.jpg%3Fv%3Dce78e43ee92e6a316b4d41e902a6ea41bcee66b68910128044d73972ac6ac006&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1149/modules/4599/asset2.jpg?v=4f5bcf1127433495636f6ff967339bad45df4fae84e1a92de420bb1f971ed870",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1149/small_logo.png?v=3212ee939c539619b87693fe295e81f514c987922cae5545825a9577bcc2a33a",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1149/modules/4599/asset1.jpg?v=ce78e43ee92e6a316b4d41e902a6ea41bcee66b68910128044d73972ac6ac006",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1149/modules/4599/asset3.jpg?v=57e804ab163463ea242758079ed5758427b7a3d38ce7c7be53c0af26871a5c12"
-      }
-    },
-    {
-      "description": "Open Systems finds the right home care services for a person’s exact needs. The passionate group of homecare professionals delivers in-home care, nursing, and behavioral services for adults.",
-      "countryId": "US",
-      "serviceIds": [
-        "10",
-        "11",
-        "7",
-        "15"
-      ],
-      "tags": [],
-      "short_name": "opensystemshealthcare",
-      "name": "Open Systems Healthcare",
-      "create_date": "2017-06-05T13:42:22.64302Z",
-      "rating": 0,
-      "model_type": "companies",
-      "twitter": "OSHealthcare",
-      "id": "1375",
-      "size": {
-        "name": "Large Size",
-        "short_name": "large"
-      },
-      "refs": {
-        "landing_page": "https://www.themuse.com/companies/opensystemshealthcare",
-        "jobs_page": "https://www.themuse.com/jobs/c-opensystemshealthcare",
-        "mini_f1_image": "https://pilbox.themuse.com/image.jpg?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fcompanies%2F1375%2Fabout_modules%2F22453%2F400e2274-f246-4dac-b353-9ecc6019b2a1.jpg&h=135&prog=1&w=183",
-        "f2_image": "https://assets.themuse.com/uploaded/companies/1375/about_modules/22453/415e9bfa-9fc0-4e30-80b8-a9f85699a830.jpg",
-        "logo_image": "https://assets.themuse.com/uploaded/companies/1375/small_logo.png?v=f30f999065448aa7e329cec6f9350901567985d9f16a15548fb88220a71d14b0",
-        "f1_image": "https://assets.themuse.com/uploaded/companies/1375/about_modules/22453/400e2274-f246-4dac-b353-9ecc6019b2a1.jpg",
-        "f3_image": "https://assets.themuse.com/uploaded/companies/1375/about_modules/22453/966b226c-244a-4993-8655-78f8b571fb50.jpg"
-      }
+      "id": "5",
+      "name": "Pop"
     }
   ]
 }

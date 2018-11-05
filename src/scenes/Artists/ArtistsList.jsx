@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import withWidth from '@material-ui/core/withWidth'
 import { withStyles } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Avatar from '@material-ui/core/Avatar'
@@ -7,8 +9,8 @@ import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import Divider from '@material-ui/core/Divider'
+import IconButton from '@material-ui/core/IconButton'
 import NewIcon from '@material-ui/icons/Add'
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -22,7 +24,9 @@ const ListItemLink = props => {
   return (
     <React.Fragment>
       <Divider />
-      <ListItem button component="a" {...props} />
+      <Link to={props.to}>
+        <ListItem button {...props}/>
+      </Link>
     </React.Fragment>
   )
 }
@@ -33,59 +37,86 @@ class ArtistsList extends React.Component {
     loading: true
   }
 
+  onClickNew= () => {
+    this.props.openDialog({
+      edit: false
+    })
+  }
+
+  onClickEdit = (event, itemId) => {
+    event.preventDefault()
+    this.props.openDialog({
+      edit: true,
+      itemId
+    })
+  }
+
+  onClickDelete = (event, itemId)  => {
+    event.preventDefault()
+    this.props.openDialog({
+      edit: false
+    })
+  }
+
   async componentDidMount() {
-    const res = await api.get('/companies')
-    this.setState({ artists: res.data, loading: false })
+    try {
+      const res = await api.get('/artists')
+      this.setState({ artists: res.data, loading: false })
+    } catch {
+      this.setState({ loading: false })
+    }
   }
 
   render() {
     const { artists, loading } = this.state
-    const { classes, openDialog } = this.props
-
-    if (loading) {
-      return <CircularProgress />
-    }
+    const { classes, width } = this.props
 
     return (
       <React.Fragment>
-        <div className={classes.title}>
-          <div className={classes.titleText}>
-            <Typography variant="h2">Artists</Typography>
+        <div className={classes.header}>
+          <div className={classes.title}>
+            <Typography variant="h4">Artists</Typography>
+            {loading && <CircularProgress className={classes.progress} />}
           </div>
           <Button
             size="small"
             title="New"
             variant="contained"
             responsive
-            onClick={() => openDialog(true)}
+            onClick={() => this.onClickNew()}
             icon={NewIcon}
           />
         </div>
         
-        {!artists.length && <div>No artists found.</div>}
-        <List component="nav">
+        {!artists.length && !loading && <div>No artists found.</div>}
+        <List dense={width === 'xs'}>
           {artists.map(artist => {
             return (
-              <ListItemLink key={artist.id} href="#simple-list">
-                <Avatar>{artist.name && artist.name[0]}</Avatar>
-                <ListItemText primary={artist.name} />
-                <ListItemSecondaryAction>
-                  <Button
-                    size="small"
-                    title="Edit"
-                    variant=""
-                    responsive
-                    onClick={() => console.log("Edit")}
-                    icon={EditIcon}
-                  />
-                  <Button
-                    size="small"
-                    title="Delete"
-                    responsive
-                    onClick={() => console.log("Delete")}
-                    icon={DeleteIcon}
-                  />
-                </ListItemSecondaryAction>
+              <ListItemLink key={artist.id} to={`artists/${artist.id}`}>
+                <div className={classes.itemTitle}>
+                  {artist.img ?
+                    <Avatar src={artist.img} /> :
+                    <Avatar>{artist.name && artist.name[0]}</Avatar>
+                  }
+                  <ListItemText primary={artist.name} />
+                </div>
+                
+                <div>
+                  <IconButton
+                    aria-label="Edit"
+                    color="primary"
+                    onClick={event => this.onClickEdit(event, artist.id)}
+                  >
+                    <EditIcon fontSize="small" />
+                  </IconButton>
+                  <IconButton
+                    aria-label="Delete"
+                    color="primary"
+                    onClick={event => this.onClickDelete(event, artist.id)}
+                  >
+                    <DeleteIcon fontSize="small" />
+                  </IconButton>
+                </div>
               </ListItemLink>
             )
           })}
@@ -96,18 +127,18 @@ class ArtistsList extends React.Component {
   }
 }
 
-const mapStateToProps = ({ ui }, props) => {
-  return {
-    open: ui.dialog.open
-  }
-}
-
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    openDialog: edit => dispatch(openDialog('artists', edit))
+    openDialog: ({ edit, itemId }) => dispatch(openDialog({
+      category: 'artists',
+      edit,
+      itemId
+    }))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  withStyles(ListStyles)(ArtistsList)
+export default connect(null, mapDispatchToProps)(
+  withWidth()(
+    withStyles(ListStyles)(ArtistsList)
+  )
 )

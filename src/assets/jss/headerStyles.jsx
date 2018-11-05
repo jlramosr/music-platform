@@ -6,7 +6,7 @@ export default {
     flexGrow: 1
   },
   logo: {
-    maxHeight: 1
+    maxHeight: 32
   }
 }
 

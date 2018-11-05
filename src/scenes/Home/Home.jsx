@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import HomeStyles from 'assets/jss/homeStyles.jsx'
 import HomeCard from './HomeCard.jsx'
-import artistsImg from 'assets/img/github.png'
-import genresImg from 'assets/img/github.png'
+import artistsImg from 'assets/img/artists.png'
+import genresImg from 'assets/img/genres.png'
 
 class Home extends React.Component {
   render() {

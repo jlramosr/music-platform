@@ -17,8 +17,8 @@ class Menu extends React.Component {
     return (
       <React.Fragment>
         <Button title="Home" to="/" icon={homeIcon} responsive />
-        {!pathname.startsWith('/artists') && <Button title="Artists" to="/artists" icon={artistsIcon} responsive />}
-        {!pathname.startsWith('/genres') && <Button title="Genres" to="/genres" icon={genresIcon} responsive />}
+        {pathname !== '/artists' && <Button title="Artists" to="/artists" icon={artistsIcon} responsive />}
+        {pathname !== '/genres' && <Button title="Genres" to="/genres" icon={genresIcon} responsive />}
       </React.Fragment>
     )
   }

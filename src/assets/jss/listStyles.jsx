@@ -1,11 +1,25 @@
-export default {
+export default theme => ({
   root: {
   },
-  title: {
+  header: {
     display: 'flex',
-    padding: '0 16px'
+    alignItems: 'center',
+    padding: '0px 16px',
+    [theme.breakpoints.up('sm')]: {
+      padding: '0px 24px'
+    }
   },
-  titleText: {
-    flexGrow: 1
+  title: {
+    flexGrow: 1,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  progress: {
+    marginLeft: 16
+  },
+  itemTitle: {
+    display: 'flex',
+    alignItems: 'center',
+    flex: 1
   }
-}
+})

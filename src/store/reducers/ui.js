@@ -5,6 +5,7 @@ const initialUIState = {
   dialog: {
     category: '',
     edit: false,
+    itemId: '',
     open: false
   }
 }
@@ -17,6 +18,7 @@ const ui = (state = initialUIState, action) => {
         dialog: {
           category: action.category,
           edit: action.edit,
+          itemId: action.itemId,
           open: true
         }
       }
