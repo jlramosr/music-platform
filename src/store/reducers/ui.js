@@ -5,8 +5,9 @@ const initialUIState = {
   dialog: {
     category: '',
     edit: false,
-    itemId: '',
-    open: false
+    itemId: null,
+    open: false,
+    operationSuccess: false
   }
 }
 
@@ -19,7 +20,8 @@ const ui = (state = initialUIState, action) => {
           category: action.category,
           edit: action.edit,
           itemId: action.itemId,
-          open: true
+          open: true,
+          operationSuccess: false
         }
       }
     case CLOSE_DIALOG:
@@ -27,7 +29,9 @@ const ui = (state = initialUIState, action) => {
         ...state,
         dialog: {
           ...state.dialog,
-          open: false
+          itemId: null,
+          open: false,
+          operationSuccess: action.operationSuccess
         }
       }
     default:

@@ -17,8 +17,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import Button from 'components/Button/Button.jsx'
 import { openDialog } from 'store/actions/ui'
 import api from 'api/config'
-import ListStyles from 'assets/jss/listStyles.jsx'
-
+import ArtistsListStyles from 'assets/jss/artistsListStyles.jsx'
 
 const ListItemLink = props => {
   return (
@@ -37,6 +36,15 @@ class ArtistsList extends React.Component {
     loading: true
   }
 
+  async getArtists() {
+    try {
+      const res = await api.get('/artists')
+      this.setState({ artists: res.data, loading: false })
+    } catch {
+      this.setState({ loading: false })
+    }
+  }
+
   onClickNew= () => {
     this.props.openDialog({
       edit: false
@@ -51,19 +59,24 @@ class ArtistsList extends React.Component {
     })
   }
 
-  onClickDelete = (event, itemId)  => {
+  onClickDelete = async (event, itemId)  => {
     event.preventDefault()
-    this.props.openDialog({
-      edit: false
-    })
+    try {
+      await api.delete(`/artists/${itemId}`)
+      this.getArtists()
+    } catch (e) {
+      console.error('Error', e)
+    }
   }
 
-  async componentDidMount() {
-    try {
-      const res = await api.get('/artists')
-      this.setState({ artists: res.data, loading: false })
-    } catch {
-      this.setState({ loading: false })
+  componentDidMount() {
+    this.getArtists()
+  }
+
+  componentDidUpdate(prevProps) {
+    const { operationSuccess } = this.props
+    if (operationSuccess && operationSuccess !== prevProps.operationSuccess) {
+      this.getArtists()
     }
   }
 
@@ -88,7 +101,7 @@ class ArtistsList extends React.Component {
           />
         </div>
         
-        {!artists.length && !loading && <div>No artists found.</div>}
+        {!artists.length && !loading && <div style={{ padding: 8 }}>No artists found.</div>}
         <List dense={width === 'xs'}>
           {artists.map(artist => {
             return (
@@ -127,7 +140,14 @@ class ArtistsList extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch, props) => {
+const mapStateToProps = ({ ui }) => {
+  const { dialog: { operationSuccess } } = ui
+  return { 
+    operationSuccess
+  }
+}
+
+const mapDispatchToProps = dispatch => {
   return {
     openDialog: ({ edit, itemId }) => dispatch(openDialog({
       category: 'artists',
@@ -137,8 +157,8 @@ const mapDispatchToProps = (dispatch, props) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(
+export default connect(mapStateToProps, mapDispatchToProps)(
   withWidth()(
-    withStyles(ListStyles)(ArtistsList)
+    withStyles(ArtistsListStyles)(ArtistsList)
   )
 )

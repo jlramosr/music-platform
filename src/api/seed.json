@@ -1,0 +1,56 @@
+{
+  "artists": [
+    {
+      "name": "Mark Knopfler",
+      "genres": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "img": "https://e00-elmundo.uecdn.es/elmundo/imagenes/2010/07/23/ocio/1279880516_extras_ladillos_1_5.jpg",
+      "id": "a8dc19f1-b3e7-46dd-9e08-f920e9ab9e85"
+    },
+    {
+      "name": "Mecano",
+      "genres": [
+        "5",
+        "2"
+      ],
+      "img": "http://epoca1.valenciaplaza.com/bd/imagenes/imagen93423p.jpg",
+      "id": "5d052367-a397-41d6-94ac-9f6147bdd11b"
+    },
+    {
+      "name": "The Rolling Stones",
+      "genres": [
+        "1",
+        "2"
+      ],
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAZ8GwDHYYa2mFi6EF8TPb0Q6A3li5XnGuuCr_KmlcaHlOExvqVw",
+      "id": "8199d977-b40c-4e4b-8091-6e16d475ff33"
+    }
+  ],
+  "genres": [
+    {
+      "id": "1",
+      "name": "Rock"
+    },
+    {
+      "id": "2",
+      "name": "Blues"
+    },
+    {
+      "id": "3",
+      "name": "Country"
+    },
+    {
+      "id": "4",
+      "name": "Jazz"
+    },
+    {
+      "id": "5",
+      "name": "Pop"
+    }
+  ]
+}

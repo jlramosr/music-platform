@@ -1,8 +1,4 @@
-import { Chip } from "@material-ui/core";
-
 export default theme => ({
-  root: {
-  },
   header: {
     display: 'flex',
     alignItems: 'center',

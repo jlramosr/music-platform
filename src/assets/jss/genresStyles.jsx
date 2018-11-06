@@ -1,6 +1,4 @@
 export default theme => ({
-  root: {
-  },
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -17,9 +15,19 @@ export default theme => ({
   progress: {
     marginLeft: 16
   },
-  itemTitle: {
+  content: {
+    padding: 24
+  },
+  paper: {
+    display: 'flex',
+    padding: 16
+  },
+  itemName: {
     display: 'flex',
     alignItems: 'center',
     flex: 1
+  },
+  itemActions: {
+
   }
 })

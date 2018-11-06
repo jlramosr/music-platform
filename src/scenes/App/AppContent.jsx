@@ -16,7 +16,7 @@ class AppContent extends React.Component {
         <Route path="/" component={Home} exact />
         <Route path="/artists" exact component={ArtistsList} />
         <Route path="/artists/:id" exact component={ArtistsDetail} />
-        <Route path="/genres/:id" component={Genres} />
+        <Route path="/genres" component={Genres} />
       </div>
     )
   }

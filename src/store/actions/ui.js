@@ -1,13 +1,12 @@
 export const OPEN_DIALOG = 'OPEN_DIALOG'
 export const CLOSE_DIALOG = 'CLOSE_DIALOG'
 
-export const openDialog = ({ category, edit, itemId }) => ({
+export const openDialog = params => ({
   type: OPEN_DIALOG,
-  category,
-  edit,
-  itemId
+  ...params
 })
 
-export const closeDialog = () => ({
-  type: CLOSE_DIALOG
+export const closeDialog = operationSuccess => ({
+  type: CLOSE_DIALOG,
+  operationSuccess
 })

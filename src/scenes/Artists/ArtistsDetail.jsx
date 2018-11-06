@@ -5,19 +5,15 @@ import withWidth from '@material-ui/core/withWidth'
 import { withStyles } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Avatar from '@material-ui/core/Avatar'
-import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Chip from '@material-ui/core/Chip'
-import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
-import IconButton from '@material-ui/core/IconButton'
-import NewIcon from '@material-ui/icons/Add'
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
 import Button from 'components/Button/Button.jsx'
 import { openDialog } from 'store/actions/ui'
 import api from 'api/config'
-import DetailStyles from 'assets/jss/detailStyles.jsx'
+import ArtistsDetailStyles from 'assets/jss/artistsDetailStyles.jsx'
 
 
 class ArtistsDetail extends React.Component {
@@ -27,20 +23,7 @@ class ArtistsDetail extends React.Component {
     loading: true
   }
 
-  onClickEdit = itemId => {
-    this.props.openDialog({
-      edit: true,
-      itemId
-    })
-  }
-
-  onClickDelete = itemId  => {
-    this.props.openDialog({
-      edit: false
-    })
-  }
-
-  async componentDidMount() {
+  getArtist = async () => {
     const { match: { params } } = this.props
     try {
       const res = await api.get(`/artists/${params.id}`)
@@ -52,14 +35,42 @@ class ArtistsDetail extends React.Component {
       const [...genresRes] = await Promise.all(genresPromises)
       const genres = genresRes.map(res => res.data.name)
       this.setState({ genres, loading: false })
-    } catch {
+    } catch (e) {
+      console.error('Error', e)
       this.setState({ loading: false })
+    }
+  }
+
+  onClickEdit = itemId => {
+    this.props.openDialog({
+      edit: true,
+      itemId
+    })
+  }
+
+  onClickDelete = async itemId => {
+    try {
+      await api.delete(`/artists/${itemId}`)
+      this.props.history.push('/artists')
+    } catch (e) {
+      console.error('Error', e)
+    }
+  }
+
+  componentDidMount() {
+    this.getArtist()
+  }
+
+  componentDidUpdate(prevProps) {
+    const { operationSuccess } = this.props
+    if (operationSuccess && operationSuccess !== prevProps.operationSuccess) {
+      this.getArtist()
     }
   }
 
   render() {
     const { artist, genres, loading } = this.state
-    const { classes, width, match: { params } } = this.props
+    const { classes } = this.props
 
     if (!artist && !loading) {
       return (<div style={{padding: 8}}>Artist not found.</div>)
@@ -114,12 +125,14 @@ class ArtistsDetail extends React.Component {
   }
 }
 
-const mapStateToProps = ({ ui }, props) => {
+const mapStateToProps = ({ ui }) => {
+  const { operationSuccess } = ui.dialog
   return {
+    operationSuccess
   }
 }
 
-const mapDispatchToProps = (dispatch, props) => {
+const mapDispatchToProps = dispatch => {
   return {
     openDialog: ({ edit, itemId }) => dispatch(openDialog({
       category: 'artists',
@@ -132,7 +145,7 @@ const mapDispatchToProps = (dispatch, props) => {
 export default connect(mapStateToProps, mapDispatchToProps)(
   withWidth()(
     withRouter(
-      withStyles(DetailStyles)(ArtistsDetail)
+      withStyles(ArtistsDetailStyles)(ArtistsDetail)
     )
   )
 )
