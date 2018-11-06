@@ -1,11 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import ListItem from '@material-ui/core/ListItem'
-import Divider from '@material-ui/core/Divider'
 import Paper from '@material-ui/core/Paper'
 import IconButton from '@material-ui/core/IconButton'
 import TextField from '@material-ui/core/TextField'
@@ -29,6 +26,7 @@ class Genres extends React.Component {
   }
 
   async getGenres() {
+    this.setState({ loading: true })
     try {
       const res = await api.get('/genres')
       this.setState({ genres: res.data, loading: false })
@@ -48,6 +46,7 @@ class Genres extends React.Component {
       genreEditableId: '0',
       isNew: true
     }))
+    console.log(this.state)
   }
 
   onClickEdit = (itemId, itemName) => {
@@ -56,6 +55,9 @@ class Genres extends React.Component {
 
   onClickSave = async itemId => {
     const { genreEditableName, isNew } = this.state
+    if (!genreEditableName) {
+      return 
+    }
     try {
       if (isNew) {
         await api.post('/genres', {
@@ -81,6 +83,17 @@ class Genres extends React.Component {
   onClickDelete = async itemId  => {
     try {
       await api.delete(`/genres/${itemId}`)
+      const res = await api.get('/artists')
+      const artists = res.data
+      console.log(artists)
+      artists.forEach(async artist => {
+        if (artist.genres.includes(itemId)) {
+          await api.put(`/artists/${artist.id}`, {
+            ...artist,
+            genres: artist.genres.filter(id => itemId !== id)
+          }) 
+        }
+      })
       this.getGenres()
     } catch (e) {
       console.error('Error', e)
@@ -92,14 +105,14 @@ class Genres extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { genreEditableId } = this.state
-    if (genreEditableId !== prevState.genreEditableId) {
+    const { genreEditableId, isNew } = this.state
+    if (genreEditableId !== prevState.genreEditableId && !isNew) {
       this.getGenres()
     }
   }
 
   render() {
-    const { genreEditableId, genres, loading } = this.state
+    const { genreEditableId, genreEditableName, genres, loading } = this.state
     const { classes } = this.props
 
     return (
@@ -128,7 +141,7 @@ class Genres extends React.Component {
                   <Paper className={classes.paper}>
                     <div className={classes.itemName}>
                       {genre.id === genreEditableId ? (
-                        <TextField value={this.state.genreEditableName} onChange={this.onFieldChange} />
+                        <TextField value={genreEditableName} onChange={this.onFieldChange} />
                       ) : (
                         <Typography variant="overline">{genre.name}</Typography>
                       )}
@@ -138,6 +151,7 @@ class Genres extends React.Component {
                       {genre.id === genreEditableId ? (
                         <React.Fragment>
                           <IconButton
+                            disabled={!genreEditableName}
                             aria-label="Save"
                             color="primary"
                             onClick={() => this.onClickSave(genre.id)}

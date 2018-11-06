@@ -3,11 +3,8 @@
     {
       "name": "Mark Knopfler",
       "genres": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
+        "d18b792e-f69d-459b-a6b4-614aa0d1ed9b",
+        "0b88cd49-2fb2-4c33-be8a-a280e14bb71c"
       ],
       "img": "https://e00-elmundo.uecdn.es/elmundo/imagenes/2010/07/23/ocio/1279880516_extras_ladillos_1_5.jpg",
       "id": "a8dc19f1-b3e7-46dd-9e08-f920e9ab9e85"
@@ -15,17 +12,16 @@
     {
       "name": "Mecano",
       "genres": [
-        "5",
-        "2"
+        "ae62a4b0-ae32-40c9-a4be-8635ce0ce548",
+        "d154273b-2cd8-4e60-8255-751ec074d432"
       ],
-      "img": "http://epoca1.valenciaplaza.com/bd/imagenes/imagen93423p.jpg",
       "id": "5d052367-a397-41d6-94ac-9f6147bdd11b"
     },
     {
       "name": "The Rolling Stones",
       "genres": [
-        "1",
-        "2"
+        "d18b792e-f69d-459b-a6b4-614aa0d1ed9b",
+        "ae62a4b0-ae32-40c9-a4be-8635ce0ce548"
       ],
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAZ8GwDHYYa2mFi6EF8TPb0Q6A3li5XnGuuCr_KmlcaHlOExvqVw",
       "id": "8199d977-b40c-4e4b-8091-6e16d475ff33"
@@ -33,23 +29,23 @@
   ],
   "genres": [
     {
-      "id": "1",
+      "id": "d18b792e-f69d-459b-a6b4-614aa0d1ed9b",
       "name": "Rock"
     },
     {
-      "id": "2",
+      "id": "ae62a4b0-ae32-40c9-a4be-8635ce0ce548",
       "name": "Blues"
     },
     {
-      "id": "3",
+      "id": "0b88cd49-2fb2-4c33-be8a-a280e14bb71c",
       "name": "Country"
     },
     {
-      "id": "4",
+      "id": "8aa99acf-b18a-4ebd-bf20-f073839a5bac",
       "name": "Jazz"
     },
     {
-      "id": "5",
+      "id": "d154273b-2cd8-4e60-8255-751ec074d432",
       "name": "Pop"
     }
   ]

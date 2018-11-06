@@ -1,6 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
@@ -11,15 +12,16 @@ import Button from 'components/Button/Button.jsx'
 import HomeCardStyles from 'assets/jss/homeCardStyles.jsx'
 
 class HomeCard extends React.Component {
-  onClickButton() {
-    const { onClick } = this.props
-    if (onClick) {
-      onClick()
+  onCreate() {
+    const { create } = this.props
+    console.log(this.props)
+    if (create) {
+      create()
     }
   }
 
   render() {
-    const { classes, img, title, to } = this.props
+    const { classes, create, img, title, to } = this.props
     return (
       <Card>
         <Link to={to}>
@@ -33,7 +35,8 @@ class HomeCard extends React.Component {
           </CardContent>
         </Link>
         <CardActions>
-          <Button title="Create a new one" variant="text" onClick={this.onClickButton}/>
+          <Button title="View" variant="text" to={to} />
+          {create && <Button title="Create a new one" variant="text" onClick={() => this.onCreate()} />}
         </CardActions>
       </Card>
     )
@@ -42,7 +45,9 @@ class HomeCard extends React.Component {
 
 HomeCard.propTypes = {
   classes: PropTypes.object.isRequired,
+  create: PropTypes.func,
   img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired
 }
 
