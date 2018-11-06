@@ -14,4 +14,8 @@ To persist data, I use *json-server*. With `npm run start-back`, we just run the
 
 ## Usage
 
-Go to http://localhost:3003 and enjoy.
+Open the browser and go to `http://localhost:3003` and enjoy.
+
+## Demo
+
+[Here](https://music-platform-yvhsicxvjj.now.sh/) is a complete and deployable demo of the project.
